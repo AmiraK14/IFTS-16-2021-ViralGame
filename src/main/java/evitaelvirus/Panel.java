@@ -183,9 +183,10 @@ public class Panel extends JPanel implements Runnable, KeyListener {
     				personita.getPosicionX(), personita.getPosicionY(), personita.getAncho(), personita.getLargo(),
     				enemigo.getPosicionX(), enemigo.getPosicionY(), enemigo.getAncho(), enemigo.getLargo()
     			)) {
-                sonidos.tocarSonido("sad");
+    			sonidos.tocarSonido("sad");
     			vidas.perderVida();
     			pantallaActual = PANTALLA_PERDEDOR;
+    			esperar(6);
     		}
     	}
     }
@@ -305,10 +306,12 @@ public class Panel extends JPanel implements Runnable, KeyListener {
             pantallaActual = PANTALLA_JUEGO_LEVEL1;
     	 }
     	 if (pantallaActual == PANTALLA_GANADOR && contadorLevels == 1) {
+    		 esperar(3000);
     		 inicializarJuego();
     		 pantallaActual = PANTALLA_JUEGO_LEVEL2;
     	 }
     	 if (pantallaActual == PANTALLA_GANADOR && contadorLevels == 2) {
+    		 esperar(3000);
     		 inicializarJuego();
     		 pantallaActual = PANTALLA_JUEGO_LEVEL3;
     	 }
@@ -321,6 +324,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
     		 pantallaActual = PANTALLA_INICIO;
     	 }
     	 if (pantallaActual == PANTALLA_PERDEDOR) {
+    		 esperar(3000);
     		 if (contadorLevels == 0) {
     			 inicializarJuego();
     			 pantallaActual = PANTALLA_JUEGO_LEVEL1;
@@ -358,8 +362,8 @@ public class Panel extends JPanel implements Runnable, KeyListener {
         try {
             sonidos = new Sonidos();
             sonidos.agregarSonido("intro", "sonidos/waduwadu.wav");
-            sonidos.agregarSonido("sad", "sonidos/sad.wav");
             sonidos.agregarSonido("cheers", "sonidos/cheers.wav");
+            sonidos.agregarSonido("sad", "sonidos/sad.wav");
         } catch (Exception e1) {
             throw new RuntimeException(e1);
         }
