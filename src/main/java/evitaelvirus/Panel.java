@@ -183,6 +183,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
     				personita.getPosicionX(), personita.getPosicionY(), personita.getAncho(), personita.getLargo(),
     				enemigo.getPosicionX(), enemigo.getPosicionY(), enemigo.getAncho(), enemigo.getLargo()
     			)) {
+                sonidos.tocarSonido("sad");
     			vidas.perderVida();
     			pantallaActual = PANTALLA_PERDEDOR;
     		}
@@ -198,7 +199,7 @@ public class Panel extends JPanel implements Runnable, KeyListener {
         		contadorLevels = contadorLevels + 1;
         		vacuna.setTimer(0);
         		pantallaActual = PANTALLA_GANADOR;
-        		sonidos.tocarSonido("magic");
+        		sonidos.tocarSonido("cheers");
         	}
     }
     
@@ -357,7 +358,8 @@ public class Panel extends JPanel implements Runnable, KeyListener {
         try {
             sonidos = new Sonidos();
             sonidos.agregarSonido("intro", "sonidos/waduwadu.wav");
-            sonidos.agregarSonido("magic", "sonidos/magic.wav");
+            sonidos.agregarSonido("sad", "sonidos/sad.wav");
+            sonidos.agregarSonido("cheers", "sonidos/cheers.wav");
         } catch (Exception e1) {
             throw new RuntimeException(e1);
         }
