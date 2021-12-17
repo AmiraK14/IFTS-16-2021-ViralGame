@@ -7,7 +7,7 @@
     <img src="https://github.com/AmiraK14/IFTS-16-2021-ViralGame/blob/main/imagenJuego.png">
   </br>
   <h2>Comandos</h2>
-    <p>Usa las flechas ARRIBA, ABAJO, DERECHA E IZQUIERDA para moverte por la ciudad en las direcciones respectivas</p>
+    <p>Usa las flechas ARRIBA, ABAJO, DERECHA e IZQUIERDA para moverte por la ciudad en las direcciones respectivas</p>
    </br>
   <h2>Mapa de clases</h2>
     <img src="https://github.com/AmiraK14/IFTS-16-2021-ViralGame/blob/main/diagrama.png">
